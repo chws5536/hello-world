@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(void) {
+	int i;
+	char name[20] = {0};
+	
+
+	printf("Hello, User\n\n");
+	printf("What is your name? : ");
+	for (i = 0; i < 20; i++) {
+		scanf("%c", &name[i]);
+		if (name[i] == '\n') {
+			break;
+		}
+	}
+	printf("\nNice to meet you, ");
+	for (i = 0; i < 20; i++) {
+		printf("%c", name[i]);
+	}
+	return 0;
+}
