@@ -7,5 +7,10 @@ int main(void) {
 			printf("*");
 		}printf("\n");
 	}
+	for (j = 0; j < 4; j++) {
+		for (i = 0; i < j+2; i++) {
+			printf("*");
+		}printf("\n");
+	}
 	return 0;
 }
