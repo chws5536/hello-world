@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main() {
 	//declaring variables
-	int guess, cnt, answer, b = 1;
+	int guess, cnt, b = 1, answer;
 	
+
 	//generating random number
+	srand(time(NULL));
 	answer = rand();
-	while (answer > 50 && answer < 1) {
+	while (answer > 50 || answer < 1) {
 		answer = rand();
 	}
 
@@ -44,8 +47,8 @@ int main() {
 				}
 			}
 			printf("You guessed correctly!\nYou guessed %d time(s)\n", cnt);
-	}
-		b = 0;
 		}
+		b = 0;
+	}
 	return 0;
 }
