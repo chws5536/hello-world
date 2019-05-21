@@ -4,7 +4,7 @@
 int main() {
 	//declaring variables
 	int base_price;
-	double kwp, kw, result;
+	double kwp, kw, result, tax = 0.09;
 
 	printf("How much electricity did you use this month? (in kilowatt) ");
 	scanf("%lf", &kw);
@@ -52,7 +52,7 @@ int main() {
 	else {
 		kwp = (52.0 * 100) + (88.5 * 100) + (127.8 * 100) + (184.3 * 100) + (274.3 * 100) + (kw - 500) * 494.0;
 	}
-	result = (base_price + kwp) * 1.09;		//tax in effect at 9%
+	result = (base_price + kwp) * (1 + tax);		//tax in effect at 9%
 
 	//printing out result
 		printf("Your electrticity bill for this month is $%.2lf", result);
